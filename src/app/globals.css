@@ -1,0 +1,58 @@
+/* globals.css */
+
+:root {
+  --primary-color: #2196F3;       /* Material Design Blue */
+  --secondary-color: #607D8B;   /* Blue-Gray */
+  --background-color: #f4f4f4; /* Light Gray */
+  --text-color: #333;           /* Dark Gray */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+      --background-color: #f10d0d; /* Dark Gray */
+      --text-color: #d20e0e;          /* Light Gray */
+  }
+}
+
+body {
+  background-color: var(--background-color);
+  /* Background Image (make sure bck3.png is in the 'public' folder) */
+  background-image: url('/bck3.png'), linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  margin: 0;
+  overflow: hidden;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease;
+}
+
+/* Basic Typography - Customize further */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary-color);
+}
+
+p {
+  color: var(--text-color);
+}
+
+/* Container for centering content */
+.main-container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+/* Example: Add styles for links */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  &:hover {
+      text-decoration: underline;
+  }
+}
+
+/* Add more specific styles as needed */
